@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;    
+}
+.Cloud-background{
+    height: 100vH;
+    width: 100%;
+    background-image: url(./Assests/Cloud-background.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.Trees-background{
+    background-image: url(./Assests/Trees-background.png);
+    height: 100vh;
+    width: 100%;
+    bottom:3vh;
+    position: absolute;
+    background-repeat: repeat;
+    animation: Trees-Background 5s linear infinite;
+}
+.Road-background{
+    background-image: url(./Assests/Road.png);
+    width: 800vw;
+    height: 20vh;
+    position: absolute;
+    background-size:auto;
+    background-repeat: repeat-x;
+    top: 80vh;
+    animation:Road-Background 10s linear infinite;
+
+}
+.farrari{
+    background-image: url(./Assests/Farrari.png);
+    width: 450px;
+    height: 120px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left:50%;
+    bottom: 15vh;
+    animation: farrarishake 5s linear infinite;
+    animation: farrari 5s ease-out 2;
+
+}
+.Wheel-1 img {
+    width: 85px;
+    position: relative;
+    top: 45px;
+    left: 55px;
+    animation: Wheel 1s linear  infinite;
+}
+.Wheel-2 img {
+    width: 85px;
+    position: relative;
+    top: -40px;
+    left: 280px;
+    animation: Wheel 1s linear  infinite;
+}
+
+@keyframes Trees-Background {
+    from {
+        background: url('./Assests/Trees-background.png') left ;
+    }
+
+    to {
+        background: url('./Assests/Trees-background.png') right ;
+    }
+}
+
+@keyframes Road-Background  {
+    100% {
+        transform: translate(-600vw);
+    }
+    
+}
+
+@keyframes farrari {
+    0% {
+        transform: translate(-500%);
+    }
+
+    100% {
+        transform: translate(0%);
+    }
+    
+}
+@keyframes Wheel {
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
